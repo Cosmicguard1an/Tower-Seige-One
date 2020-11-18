@@ -36,8 +36,13 @@ function setup() {
   //third layer
   box9= new Box(470,280,35,35);
 
+  var options = {
+    restitution: 0.3,
+    friction: 0.3,
+    density: 1
 
-  polygon = Bodies.circle(50,200,20)
+  }
+  polygon = Bodies.circle(50,200,20,options)
   World.add(world,polygon);
 
   polygonObject = new SlingShot(polygon,{x: 100, y:350})
